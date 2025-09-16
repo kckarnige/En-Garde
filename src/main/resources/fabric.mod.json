@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "en_garde",
+  "version": "${version}",
+  "name": "En Garde!",
+  "description": "Adds a vanilla-like parrying mechanic to shields!",
+  "authors": [
+    "KiCKinTheBucket"
+  ],
+  "contact": {
+    "homepage": "https://modrinth.com/mod/engarde",
+    "sources": "https://github.com/kckarnige/EnGarde"
+  },
+  "license": "MPL-2.0",
+  "icon": "assets/en_garde/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "com.kckarnige.en_garde.client.En_gardeDataGenerator"
+    ],
+    "client": [
+      "com.kckarnige.en_garde.client.En_gardeClient"
+    ],
+    "main": [
+      "com.kckarnige.en_garde.En_garde"
+    ]
+  },
+  "mixins": [
+    "en_garde.mixins.json",
+    {
+      "config": "en_garde.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": ">=${minecraft_version}",
+    "midnightlib": ">=${midnightlib_version}"
+  }
+}

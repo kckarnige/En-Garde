@@ -1,0 +1,15 @@
+{
+
+    "en_garde.midnightconfig.title": "En Garde! Config",
+
+    "en_garde.midnightconfig.parryWindow": "Parry Window",
+    "en_garde.midnightconfig.parryWindow.tooltip": "The window of time to parry an attack in ticks.",
+
+    "en_garde.midnightconfig.parryKnockback": "Parry Knockback",
+    "en_garde.midnightconfig.parryKnockback.tooltip": "The amount of knockback applied when an attack is parried.",
+
+    "en_garde.midnightconfig.blockDamageMultiplier": "Blocking Damage Multiplier",
+    "en_garde.midnightconfig.blockDamageMultiplier.tooltip": "The value damage is multiplied by when blocked. 1 = 100%, 0.5 = 50%, etc.",
+
+    "en_garde.midnightconfig.arrowsRequireParry": "Blocking Arrows Requires Parry"
+}

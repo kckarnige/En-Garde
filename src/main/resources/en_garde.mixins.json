@@ -1,0 +1,17 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.kckarnige.en_garde.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "DisableBlockingDelay",
+    "ShieldCooldown",
+    "ShieldParrying"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}
