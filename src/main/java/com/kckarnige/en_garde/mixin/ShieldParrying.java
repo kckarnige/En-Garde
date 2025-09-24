@@ -32,7 +32,7 @@ public abstract class ShieldParrying {
     @Unique
     private static final double  NORMAL_BLOCK_MULTIPLIER = blockDamageMultiplier;
     @Unique
-    private static final boolean APPLY_TO_PROJECTILES = arrowsRequireParry;
+    private static final boolean APPLY_TO_PROJECTILES = projectileRequireParry;
 
     @Unique
     private static final ThreadLocal<Boolean> parry$REENTER = ThreadLocal.withInitial(() -> false);
