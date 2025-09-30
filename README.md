@@ -5,7 +5,7 @@ Do you miss shields not being so extremely overpowered against mobs?
 
 Yeah? Well this might just be the mod for you!
 
-This mod balances the shield by adding a simple parry mechanic! Block as soon as a mob attacks and they bounce right off your shield, but if you're too early or just stand their blocking, it isn't gonna be as pretty..
+This mod balances the shield by adding a simple parry mechanic! Block as soon as a mob attacks and they bounce right off your shield, but if you're too early or just stand there blocking, it isn't gonna be as pretty..
 
 I personally think this is a more balanced way to keep shields from being too overpowered, while still letting you negate any damage like usual, if you're quick enough.
 
