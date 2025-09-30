@@ -12,7 +12,7 @@ I personally think this is a more balanced way to keep shields from being too ov
 Just about everything in this mod is configurable, so go wild!
 
 <details>
-<summary>!! Important if you want modded shields to work !!</summary>
+<summary><b><i>!! Important if you want modded shields to work !!</i></b></summary>
 
 Either make a datapack, or add the item tag data to your mod like so:
 
