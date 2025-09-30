@@ -3,34 +3,24 @@
   "id": "en_garde",
   "version": "${version}",
   "name": "En Garde!",
-  "description": "Adds a vanilla-like parrying mechanic to shields!",
+  "description": "Balances shields by adding a \"parrying\" mechanic to make them less OP.",
   "authors": [
     "KiCKinTheBucket"
   ],
   "contact": {
-    "homepage": "https://modrinth.com/mod/engarde",
-    "sources": "https://github.com/kckarnige/EnGarde"
+    "homepage": "https://modrinth.com/mod/en-garde",
+    "sources": "https://github.com/kckarnige/En-Garde"
   },
   "license": "MPL-2.0",
   "icon": "assets/en_garde/icon.png",
   "environment": "*",
   "entrypoints": {
-    "fabric-datagen": [
-      "com.kckarnige.en_garde.client.En_gardeDataGenerator"
-    ],
-    "client": [
-      "com.kckarnige.en_garde.client.En_gardeClient"
-    ],
     "main": [
       "com.kckarnige.en_garde.En_garde"
     ]
   },
   "mixins": [
-    "en_garde.mixins.json",
-    {
-      "config": "en_garde.client.mixins.json",
-      "environment": "client"
-    }
+    "en_garde.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=${loader_version}",
