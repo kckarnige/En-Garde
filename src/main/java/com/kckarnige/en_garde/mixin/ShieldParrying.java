@@ -4,13 +4,11 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.math.Vec3d;
-import net.minecraft.world.World;
 import net.minecraft.registry.tag.DamageTypeTags;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
@@ -68,8 +66,7 @@ public abstract class ShieldParrying {
             double dz = player.getZ() - livingAttacker.getZ();
             livingAttacker.takeKnockback(PARRY_KNOCKBACK_STRENGTH, dx, dz);
 
-            World w = player.getWorld();
-            w.playSound(null, player.getBlockPos(), SoundEvents.ITEM_SHIELD_BLOCK,
+            player.getWorld().playSound(null, player.getBlockPos(), SoundEvents.ITEM_SHIELD_BLOCK,
                     SoundCategory.PLAYERS, 1.0F, 1.25F);
 
             cir.setReturnValue(false); // negate all damage
@@ -77,7 +74,6 @@ public abstract class ShieldParrying {
         }
 
         // --- Normal Block: Take partial damage ---
-        Item blockingItem = active.getItem();
         player.stopUsingItem();
 
         float reduced = (float) (amount * NORMAL_BLOCK_MULTIPLIER);
