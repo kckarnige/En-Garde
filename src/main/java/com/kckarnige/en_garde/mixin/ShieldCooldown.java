@@ -17,7 +17,7 @@ public abstract class ShieldCooldown {
     private void parry$cooldownOnStop(CallbackInfo ci) {
         LivingEntity self = (LivingEntity)(Object)this;
         if (!(self instanceof PlayerEntity player)) return;
-        if (player.getWorld().isClient()) return;
+        if (player.getEntityWorld().isClient()) return;
 
         ItemStack active = player.getActiveItem();
         if (active.isEmpty()) return;

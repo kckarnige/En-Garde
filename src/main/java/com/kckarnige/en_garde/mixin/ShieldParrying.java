@@ -41,7 +41,7 @@ public abstract class ShieldParrying {
 
         LivingEntity self = (LivingEntity)(Object)this;
         if (!(self instanceof PlayerEntity player)) return;
-        if (player.getWorld().isClient()) return;
+        if (player.getEntityWorld().isClient()) return;
 
         // Must be actively using a recognized blocking item
         if (!player.isUsingItem()) return;
@@ -66,7 +66,7 @@ public abstract class ShieldParrying {
             double dz = player.getZ() - livingAttacker.getZ();
             livingAttacker.takeKnockback(PARRY_KNOCKBACK_STRENGTH, dx, dz);
 
-            player.getWorld().playSound(null, player.getBlockPos(), SoundEvents.ITEM_SHIELD_BLOCK.value(),
+            player.getEntityWorld().playSound(null, player.getBlockPos(), SoundEvents.ITEM_SHIELD_BLOCK.value(),
                     SoundCategory.PLAYERS, 1.0F, 1.25F);
 
             cir.setReturnValue(false); // negate all damage
@@ -78,7 +78,7 @@ public abstract class ShieldParrying {
 
         float reduced = (float) (amount * NORMAL_BLOCK_MULTIPLIER);
 
-        player.getWorld().playSound(null, player.getBlockPos(), SoundEvents.ITEM_SHIELD_BLOCK.value(),
+        player.getEntityWorld().playSound(null, player.getBlockPos(), SoundEvents.ITEM_SHIELD_BLOCK.value(),
                 SoundCategory.PLAYERS, 0.7F, 0.9F);
 
         boolean result;
@@ -101,7 +101,7 @@ public abstract class ShieldParrying {
     @Unique
     private static boolean parry$inFront(PlayerEntity player, Entity attacker) {
         Vec3d look = player.getRotationVec(1.0F).normalize();
-        Vec3d toAttacker = attacker.getPos().subtract(player.getPos()).normalize();
+        Vec3d toAttacker = attacker.getEntityPos().subtract(player.getEntityPos()).normalize();
         return toAttacker.dotProduct(look) > 0.0D;
     }
 }
